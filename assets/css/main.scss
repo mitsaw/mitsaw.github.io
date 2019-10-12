@@ -1,0 +1,41 @@
+---
+---
+@charset "utf-8";
+
+// variables
+$title-font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+$base-font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+
+$sm-breakpoint:       768px;
+
+@mixin sm() {
+    @media screen and (max-width: $sm-breakpoint) {
+        @content;
+    }
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('{{ "/assets/fonts/ProximaNova-Regular.otf" | prepend: site.baseurl }}') format('opentype');
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('{{ "/assets/fonts/Proxima Nova Bold.otf" | prepend: site.baseurl }}') format('opentype');
+  font-weight: bold;
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "grid",
+        "layout"
+;

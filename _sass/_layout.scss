@@ -1,0 +1,74 @@
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+.index {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+}
+
+.logo-container {
+  margin: 5px 5px 0;
+}
+
+.red-container {
+  background: #A31F34;
+  margin: 5px;
+  min-height: 150px;
+  height: 150px;
+  display: flex;
+}
+
+.bg-img {
+  flex: 1;
+  background: url('/assets/images/marching.png');
+  background-position: center 40%;
+  background-size: cover;
+  margin: 0px 5px 5px;
+  filter: grayscale(100%);
+}
+
+.about {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  max-width: 450px;
+  padding: 15px 30px;
+}
+
+.nav-menu {
+  margin: auto; /* Important */
+  text-align: center;
+}
+
+.nav-menu a {
+  display: inline-block;
+  margin: 0 1em;
+  color: white;
+  font-size: 48px;
+  @media (max-width: 767px) {
+    font-size: 36px;
+    display: block;
+  }
+  line-height: 1;
+  font-weight: bold;
+}
