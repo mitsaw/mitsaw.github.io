@@ -27,6 +27,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - content
+  - vendor
 
 defaults:
   -
