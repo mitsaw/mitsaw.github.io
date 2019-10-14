@@ -1,3 +1,6 @@
+$mobile-width: 767px;
+$narrow-phone-width: 400px;
+
 a {
   text-decoration: none;
   &:hover {
@@ -30,14 +33,6 @@ body, html {
   margin: 5px 5px 0;
 }
 
-.red-container {
-  background: #A31F34;
-  margin: 5px;
-  min-height: 150px;
-  height: 150px;
-  display: flex;
-}
-
 .bg-img {
   flex: 1;
   background: url('/assets/images/marching.png');
@@ -55,20 +50,45 @@ body, html {
   padding: 15px 30px;
 }
 
-.nav-menu {
-  margin: auto; /* Important */
-  text-align: center;
+.red-container {
+  background: #A31F34;
+  margin: 5px;
+  min-height: 150px;
+  height: 150px;
+  display: flex;
+
+  @media screen and (max-width: $mobile-width) {
+    height: 100px;
+    min-height: 100px;
+  }
+  @media screen and (max-width: $narrow-phone-width) {
+    height: 80px;
+    min-height: 80px;
+  }
 }
 
-.nav-menu a {
-  display: inline-block;
-  margin: 0 1em;
-  color: white;
-  font-size: 48px;
-  @media (max-width: 767px) {
-    font-size: 36px;
-    display: block;
+nav.nav-menu {
+  margin: auto; /* Important */
+  text-align: center;
+  display: flex;
+
+  a {
+    display: inline-block;
+    margin: 0 1em;
+    color: white;
+    font-size: 48px;
+
+    @media screen and (max-width: $mobile-width) {
+      font-size: 32px;
+      display: block;
+      margin: 0 0.5em;
+    }
+
+    @media screen and (max-width: $narrow-phone-width) {
+      font-size: 28px;
+    }
+
+    line-height: 1;
+    font-weight: bold;
   }
-  line-height: 1;
-  font-weight: bold;
 }
